@@ -1,27 +1,28 @@
 import './styles.css'
-import pergaminho from '../assets/pergaminho.svg';
-import cards from '../util/index'
+import SideBar from '../components/SideBar';
+import Card from '../components/Card';
+import cards from '../util';
+import { useState } from 'react';
 
 export default function App() {
 
+const [stateCard, setStateCard] = useState([...cards])
 
   return (
     <div className="App">
-      <div className="pergaminho_game">
-        <img src={pergaminho} alt='Imagem de um pergaminho' />
-      </div>
+  
+      <SideBar />
       <div className="page_game">
-        <h2>Jogo da memória</h2>
-        <div className="cards top">
-          {cards.map(card => (
-            <img src={card} alt='cartas dos personagens' key={card}/>
-          ))}
-        </div>
-        <div className="cards bottom">
-          {cards.map(card => (
-            <img src={card} alt='cartas dos personagens' key={card}/>
-          ))}
-        </div>
+        {
+          stateCard.map(card =>(
+            <Card 
+              key={card.id}
+              card={card}
+              stateCard={stateCard}
+              setStateCard={setStateCard}
+            />
+          ))
+        }
       </div>
     </div>
   )
