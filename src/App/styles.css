@@ -35,3 +35,24 @@
   min-height: calc(100vh - 236px) !important;
   margin: auto 15px;
 }
+.div_congratulation{position: absolute;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background-color: rgba(0, 0, 0, 0.753);
+
+  min-height: 100%;
+  min-width: 100%;
+
+  left: 0;
+}
+.div_congratulation{
+  cursor: pointer;
+}
+.div_congratulation .congratulations {
+  width: 60rem;
+  height: 50rem;
+
+}

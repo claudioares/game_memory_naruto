@@ -2,7 +2,7 @@ import './styles.css'
 import CentralPart from './pergaminho/centralParts';
 import LitleParts from './pergaminho/litleParts';
 
-export default function Card () {
+export default function Card ({setStateCard, cards}) {
     return(
         <div className="pergaminho_game">
             <LitleParts 
@@ -12,7 +12,10 @@ export default function Card () {
                 maxtop=''
                 radius={'100px 100px 0px 0px'}
             />
-            <CentralPart />
+            <CentralPart
+                setStateCard={setStateCard}
+                cards={cards}
+            />
             <LitleParts
                 minibottom='0'
                 minitop=''

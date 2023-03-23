@@ -25,7 +25,7 @@ export default function Card ({card, stateCard, setStateCard}){
                     item.id !== currentCard.id && item.id !== onlyTurnCards[0].id
                 );
                 setStateCard(filterCards)
-            }, 1500)
+            }, 900)
 
             return;
 
@@ -42,7 +42,12 @@ export default function Card ({card, stateCard, setStateCard}){
     
                 setStateCard([...localCard])
             }
-        },1500)
+
+        },900)
+
+    }
+
+    function HandleClearCards () {
 
     }
 
