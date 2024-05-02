@@ -50,7 +50,8 @@ export default function App() {
             />
           ))
           :
-          modal && <div className="div_congratulation" onClick={()=>resetGame()}>
+          modal && 
+          <div className="div_congratulation" onClick={()=>resetGame()}>
             <img className='congratulations' src={congratulations} alt='Imagens de Congratualizações' />
           </div>
         }

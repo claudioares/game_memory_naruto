@@ -2,38 +2,27 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  height: 100vh;
+  width: 100%;
 
-
-  padding: 2rem;
   overflow: hidden;
 
-  min-height: 100vh !important;
-
   background-color: #f9a31b;
-  color: rgb(0, 0, 0);
-}
-.App h2 {
-  font-family: "Reggae One";
-  font-style: normal;
-  font-weight: 400;
-  font-size: 36px;
-  line-height: 52px;
 }
 
 .page_game {
   display: flex;
   flex-wrap: wrap;
   
-
   align-items: center;
   justify-content: center;
 
-  gap: 0.2rem;
+  padding: 2rem 0;
+  gap: 0.4rem;
 
-  background-color: #d9d9d9;
-  min-width: calc(100% - 19.2rem);
-  min-height: calc(100vh - 236px) !important;
-  margin: auto 15px;
+  background-color: #490a0a;
+  width:90rem;
+  height: 70rem;
 }
 .div_congratulation{position: absolute;
 
