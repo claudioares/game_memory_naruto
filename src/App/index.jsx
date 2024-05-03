@@ -1,5 +1,4 @@
-import './styles.css'
-import SideBar from '../components/SideBar';
+import Pergaminho from "../components/Pergaminho"
 import Card from '../components/Card';
 import cards from '../util';
 import { useState } from 'react';
@@ -33,13 +32,26 @@ export default function App() {
   }
 
   return (
-    <div className="App">
+    <div className={`
+      flex items-center justify-center 
+      h-screen w-full
+      bg-bg-app bg-center bg-no-repeat bg-cover
+      px-44
+    `}>
   
-      <SideBar 
+    <div className={`
+      flex items-center justify-center h-[47%] w-full bg-black
+      
+    `}>
+      <Pergaminho 
         cards={cards}
         setStateCard={setStateCard} 
       />
-      <div className="page_game">
+      <div className={`
+        flex flex-wrap items-center 
+        justify-center gap-[0.4rem]
+        bg-[#4F1914] bg-opacity-70 w-full h-full
+      `}>
         {stateCard.length ?
           stateCard.map(card =>(
             <Card 
@@ -51,11 +63,24 @@ export default function App() {
           ))
           :
           modal && 
-          <div className="div_congratulation" onClick={()=>resetGame()}>
-            <img className='congratulations' src={congratulations} alt='Imagens de Congratualizações' />
+          <div className={`
+            div_congratulation
+            absolute flex items-center 
+            justify-center bg-black bg-opacity-85
+            w-full h-full cursor-pointer
+            left-0
+          `} onClick={()=>resetGame()}>
+            <img 
+              className={`
+                  w-[60rem] h-[50rem]
+              `} 
+              src={congratulations} 
+              alt='Imagens de Congratualizações' 
+            />
           </div>
         }
       </div>
+    </div>
     </div>
   )
 };

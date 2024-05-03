@@ -1,4 +1,3 @@
-import './styles.css'
 import capa from '../../assets/cards/capa.svg';
 
 
@@ -47,18 +46,16 @@ export default function Card ({card, stateCard, setStateCard}){
 
     }
 
-    function HandleClearCards () {
-
-    }
-
-
     return ( 
         <img 
             src={card.turned ? card.img : capa} 
             alt='cartas dos personagens' 
           
             id={card.name} 
-            className='card'
+            className={`
+                flex gap-[0.2rem] cursor-pointer
+                hover:transform hover:scale-[1.05]
+            `}
             onClick={()=>handleTurnCard()}
         />
     )
