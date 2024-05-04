@@ -35,13 +35,13 @@ export default function App() {
     <div className={`
       flex items-center justify-center 
       h-screen w-full
-      bg-bg-app bg-center bg-no-repeat bg-cover
-      px-44
+      bg-bg-app bg-center bg-no-repeat bg-cover px-12
+      2xl:px-44
     `}>
   
     <div className={`
-      flex items-center justify-center h-[47%] w-full bg-black
-      
+      flex items-center justify-center h-[95%] w-full
+      2xl:h-[47%]
     `}>
       <Pergaminho 
         cards={cards}
@@ -64,7 +64,6 @@ export default function App() {
           :
           modal && 
           <div className={`
-            div_congratulation
             absolute flex items-center 
             justify-center bg-black bg-opacity-85
             w-full h-full cursor-pointer
