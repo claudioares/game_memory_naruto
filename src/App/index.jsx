@@ -40,8 +40,9 @@ export default function App() {
     `}>
   
     <div className={`
-      flex items-center justify-center h-[95%] w-full
+      flex items-center justify-center h-[75%] w-full
       2xl:h-[47%]
+      md:h-[95%]
     `}>
       <Pergaminho 
         cards={cards}

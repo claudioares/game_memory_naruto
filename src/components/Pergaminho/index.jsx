@@ -3,7 +3,8 @@ import CentralCentral from './component.central';
 export default function Card ({setStateCard, cards}) {
     return(
         <div className={`
-            h-full w-60 relative
+            h-full w-60 relative hidden
+            md:block
         `}>
             <div className='w-full h-8 bg-orange-300 absolute top-0'></div>
             <CentralCentral

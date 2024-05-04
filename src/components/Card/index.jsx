@@ -55,6 +55,10 @@ export default function Card ({card, stateCard, setStateCard}){
             className={`
                 flex gap-[0.2rem] cursor-pointer
                 hover:transform hover:scale-[1.05]
+                w-20
+                sm:w-28
+                md:w-36
+                lg:w-auto
             `}
             onClick={()=>handleTurnCard()}
         />
